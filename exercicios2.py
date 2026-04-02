@@ -8,19 +8,22 @@
 nome = str(input("Nome do Aluno: "))
 turma = str(input("Nome da turma: "))
 materia = str(input("Matéria: "))
-NotasDoEstudante = float(input("Notas: "))
-SomaDasNotas = float(input("Soma de Todas as notas: "))
-QuantidadesDeNotas = float(input("Quantidade de notas: "))
+notas = 0.0
+qtd_notas = 0
+opcao_tela = 1
 
-while opcao == 1:
-    print("O que você deseja?\n1 - Adicionar notas\n0 - Terminar média")
-    opcao = int(input("Digite a opção: "))
-    if opcao == 1:
-        # preciso pedir o valor do produto que ele quer rediricionar
-        NotasDoEstudante = float(input("Insira uma nota: "))
-        # depois preciso somar isso ao valor total da compra
-
-    elif opcao == 0:
-        print(nome, "você deve pagar R$", valorTotal)
-
-
+while opcao_tela == 1:
+    opcao_tela = int(input("O que você deseja?\n[1] - Adicionar nota\n[0] - Sair\nOpção: "))
+    if opcao_tela == 1:
+       qtd_notas += 1
+       nova_nota = float(input(f"{qtd_notas}ª nota do estudante: "))
+       notas = notas + nova_nota
+    else:
+        print("Média = ", notas / qtd_notas)
+        if notas >= 6:
+            print("Você passou")
+        if notas <= 6:
+            print("Você esta em exame")
+        if notas <= 4:
+            print("Você reprovou")
+    
