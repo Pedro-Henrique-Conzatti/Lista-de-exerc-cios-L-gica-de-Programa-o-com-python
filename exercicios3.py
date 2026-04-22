@@ -14,7 +14,6 @@ DescriçãoProduto = str(input("Descreva o seu produto: "))
 QuantidadeProduto = int(input("Insira a quantidade do seu produto: "))
 ValorProduto = float(input("Insira o valor do seu produto: "))
 ValorProdutoTotal = QuantidadeProduto * ValorProduto
-reescreva_quantidade_nome = int(input("Reescreva a quantidade do produto: ")) 
 
 opcao = 0
 
@@ -29,4 +28,19 @@ while opcao != 6:
     if opcao == 1:
         print("-------------------------")
         print("Nome: ", Produto , " | Valor R$: ", ValorProdutoTotal)
+    elif opcao == 2:
+        print("Nome do produto atual: ", Produto)
+        Produto = str(input("Insira o novo nome do produto: "))
+    elif opcao == 3:
+        print("Descrição do produto: ", DescriçãoProduto)
+        DescriçãoProduto = str(input("Descreva o seu produto: "))
+    elif opcao == 4:
+        print("Quantidade do produto: ",QuantidadeProduto)
+        QuantidadeProduto = int(input("Insira a quantidade do seu produto: "))
+    elif opcao == 5:
+        ValorProduto = float(input("Insira o novo valor do produto: R$ "))
+        ValorProdutoTotal = QuantidadeProduto * ValorProduto
+        print("Valor unitario do produto: ", ValorProdutoTotal)
+    elif opcao == 6:
+        print("fim do programa")
         
